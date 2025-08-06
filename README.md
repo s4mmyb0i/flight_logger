@@ -46,7 +46,7 @@ Install via `pip install -r requirements.txt`. Main packages:
 
 📄 Data Format
 
-Your data/my_flights.csv should follow this schema:
+Your [data/my_flights.csv](data/my_flights.csv) should follow this schema:
 
 Column	Description
 from	IATA code of origin airport (e.g., LAX)
@@ -60,13 +60,13 @@ to_city	City name of destination
 airline	Airline name
 flight_number	Flight number (can be string or int)
 arrival_transfer	1 if this flight ends in a transfer, else 0
-delayed	Delay duration in minutes (optional)
+delayed	Delay duration in minutes
 cancelled	1 if cancelled, else 0
 trip_name	Name of the trip for grouping
 notes	Freeform notes field
 
 🗺 Airports Data
-- Your app reads data/airports.csv, which is auto-updated from OurAirports
+- Your app reads [data/airports.csv](data/airports.csv), which is auto-updated from OurAirports
 - If new airports are found in your flights, they are fetched from a cached master file: data/airports_master.csv
 - The master file includes all known public-use airports and heliports with IATA codes.
 
@@ -74,7 +74,3 @@ notes	Freeform notes field
 - Time zone data is derived using timezonefinder and pytz.
 - The app uses each airport’s geolocation to infer its time zone for accurate duration and transfer calculations.
 - If a time zone cannot be determined, UTC is used as a fallback.
-
----
-
-Let me know if you'd like this pushed into an actual `README.md` file or want a badge/preview image at the top.
