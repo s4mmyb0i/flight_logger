@@ -1,76 +1,80 @@
-**Flight Logger**
-================
+# ✈️ Flight Logger
 
 A web-based flight logger application built using Streamlit, Pydeck, and Pandas.
 
-**Overview**
-------------
+## 🌍 Overview
 
-This project is a flight logger that allows users to visualize their flight data on a map. The application reads in flight data from a CSV file, processes the data, and displays it on a globe using Pydeck. The application also provides various statistics and metrics about the flights.
+This project lets you log and visualize personal flight history on a 3D globe. It reads flight data from a CSV file, fills in missing airport information, and displays all your flights using arcs on an interactive globe.
 
-**Features**
-------------
+## 🚀 Features
 
-* Visualize flight data on a globe using Pydeck
-* Display flight statistics and metrics, including:
-	+ Total flights
-	+ Delayed flights
-	+ Cancelled flights
-	+ Average flight duration
-	+ Total flight time
-	+ Average transfer time
-	+ Total transfer time
-* Filter out cancelled flights for calculations
-* Display unique cities visited
+- Visualize flights on a globe using Pydeck + Carto basemaps
+- Automatically fills missing airports from the [OurAirports](https://davidmegginson.github.io/ourairports-data/) database
+- Computes and displays key statistics:
+  - Total flights
+  - Delayed flights
+  - Cancelled flights
+  - Transfers
+  - Countries and cities visited
+  - Total and average flight durations
+  - Transfer time metrics
+- Colored arcs per `trip_name` for visual grouping
+- Time zone-aware calculations using `pytz`
 
-**Requirements**
----------------
+## 🛠 Requirements
 
-* Python 3.x
-* Streamlit
-* Pydeck
-* Pandas
-* Pytz
-* Geopy
+Install via `pip install -r requirements.txt`. Main packages:
 
-**Usage**
------
+- Python 3.8+
+- `streamlit`
+- `pydeck`
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `pytz`
+- `geopy`
+- `timezonefinder`
 
-1. Input your flight data CSV file to the application
-2. Install the required libraries using `pip install -r requirements.txt`
-3. Run the application using `streamlit run main.py`
+## 📦 Usage
 
-**Data Format**
--------------
+1. Place your flight log in `data/my_flights.csv` using the format below.
+2. Run:
 
-Input your flight details in [`my_flights.csv`](data/my_flights.csv). The flight data CSV file should have the following columns:
+   ```bash
+   streamlit run main.py
+   ```
 
-* `from`: departure iata airport code (str (3 char))
-* `to`: arrival iata airport code (str (3 char))
-* `departure_date`: departure date in YYYY-MM-DD format
-* `departure_time`: departure time in HH:MM format
-* `arrival_date`: arrival date in YYYY-MM-DD format
-* `arrival_time`: arrival time in HH:MM format
-* `from_city`: departure city name (str)
-* `to_city`: arrival city name (str)
-* `airline`: airline name (str)
-* `flight_number`: flight number (int)
-* `arrival_transfer`: if the arrival airport is a transfer flight (0 or 1)
-* `delayed`: how long the flight was delayed (float)
-* `cancelled`: how many times the flight was cancelled (int)
-* `trip_name`: trip name (str)
-* `notes`: any additional info (any)
+📄 Data Format
 
-**Airports Data**
-----------------
+Your data/my_flights.csv should follow this schema:
 
-The airports data is stored in a CSV file named [`airports.csv`](data/airports.csv) in the `data` directory. This file should have the following columns:
+Column	Description
+from	IATA code of origin airport (e.g., LAX)
+to	IATA code of destination airport (e.g., JFK)
+departure_date	Departure date in YYYY-MM-DD
+departure_time	Departure time in HH:MM
+arrival_date	Arrival date in YYYY-MM-DD
+arrival_time	Arrival time in HH:MM
+from_city	City name of origin
+to_city	City name of destination
+airline	Airline name
+flight_number	Flight number (can be string or int)
+arrival_transfer	1 if this flight ends in a transfer, else 0
+delayed	Delay duration in minutes (optional)
+cancelled	1 if cancelled, else 0
+trip_name	Name of the trip for grouping
+notes	Freeform notes field
 
-This info is generated using the [`airports_master`](data/airports_master.csv) file from [David Megginson's GitHub](https://davidmegginson.github.io/ourairports-data/)
+🗺 Airports Data
+- Your app reads data/airports.csv, which is auto-updated from OurAirports
+- If new airports are found in your flights, they are fetched from a cached master file: data/airports_master.csv
+- The master file includes all known public-use airports and heliports with IATA codes.
 
-**Notes**
--------
+⏱ Time Zone Handling
+- Time zone data is derived using timezonefinder and pytz.
+- The app uses each airport’s geolocation to infer its time zone for accurate duration and transfer calculations.
+- If a time zone cannot be determined, UTC is used as a fallback.
 
-* This project uses the `pytz` library to handle time zones. If a time zone is not specified for an airport, the application will use the default time zone.
-* The application assumes that the flight data is in the same time zone as the departure airport.
-* The application uses the `geopy` library to geocode airport codes. If an airport code is not found, the application will use the default coordinates.
+---
+
+Let me know if you'd like this pushed into an actual `README.md` file or want a badge/preview image at the top.
