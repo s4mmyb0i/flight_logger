@@ -6,8 +6,7 @@ from utils import load_airports, compute_durations, autofill_missing_airports, d
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Flight Logger", layout="wide")
-st.title("✈️ Samvit's Flights Since August 2019")
-st.subheader("(When he moved to the United States)")
+st.title("✈️ Flight Logger")
 
 # Load data
 download_master_airports()
