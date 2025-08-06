@@ -1,0 +1,21 @@
+iata_code,latitude_deg,longitude_deg,municipality,country,time_zone
+BER,52.362247,13.500672,Berlin,DE,Europe/Berlin
+LHR,51.4706,-0.461941,London,GB,Europe/London
+AMS,52.308601,4.76389,Amsterdam,NL,Europe/Amsterdam
+CPH,55.617900848389,12.656000137329,Copenhagen,DK,Europe/Copenhagen
+JRO,-3.42941,37.074501,Arusha,TZ,Africa/Dar_es_Salaam
+DEN,39.861698150635,-104.672996521,Denver,US,America/Denver
+DTW,42.21377,-83.353786,Detroit,US,America/Detroit
+EWR,40.692501,-74.168701,Newark,US,America/New_York
+JFK,40.639447,-73.779317,New York,US,America/New_York
+LAX,33.942501,-118.407997,Los Angeles,US,America/Los_Angeles
+MIA,25.79319953918457,-80.29060363769531,Miami,US,America/New_York
+SFO,37.619806,-122.374821,San Francisco,US,America/Los_Angeles
+CDG,49.012798,2.55,"Paris (Roissy-en-France, Val-d'Oise)",FR,Europe/Paris
+ZRH,47.458056,8.548056,Zurich,CH,Europe/Zurich
+IST,41.261297,28.741951,"Arnavutköy, Istanbul",TR,Europe/Istanbul
+LIM,-12.0219,-77.114305,Lima,PE,America/Lima
+CUZ,-13.535699844400002,-71.9387969971,Cusco,PE,America/Lima
+BOM,19.0886993408,72.8678970337,Mumbai,IN,Asia/Kolkata
+IXC,30.6735,76.788498,Chandigarh,IN,Asia/Kolkata
+DEL,28.55563,77.09519,New Delhi,IN,Asia/Kolkata
