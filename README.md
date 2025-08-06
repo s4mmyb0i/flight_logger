@@ -1,6 +1,6 @@
 # ✈️ Flight Logger
 
-A web-based flight logger application built using Streamlit, Pydeck, and Pandas.
+A flight logger application built using Streamlit, Pydeck, and Pandas.
 
 ## 🌍 Overview
 
