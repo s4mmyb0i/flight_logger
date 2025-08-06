@@ -1,30 +1,21 @@
 from,to,departure_date,departure_time,arrival_date,arrival_time,from_city,to_city,airline,flight_number,arrival_transfer,delayed,cancelled,trip_name,notes
-EWR,MIA,2022-12-20,07:50,2022-12-20,11:05,New York,Miami,American Airlines,AA2978,0,NaN,0,miami_pranay-out,NaN
-MIA,EWR,2023-01-01,18:50,2023-01-01,21:50,Miami,New York,American Airlines,AA322,0,NaN,0,miami_pranay-in,NaN
-EWR,DTW,2023-01-25,20:19,2023-01-25,22:20,New York,Detroit,Delta,DL2567,0,NaN,0,umich_audition-out,NaN
-DTW,EWR,2023-01-26,21:20,2023-01-26,23:03,Detroit,New York,Delta,DL2609,0,NaN,0,umich_audition-in,NaN
-EWR,CDG,2023-07-10,18:35,2023-07-11,13:35,New York,Paris,United,NaN,0,NaN,0,njys_france,NaN
-ZRH,BOM,2023-07-19,09:55,2023-07-20,01:10,Zurich,Mumbai,NaN,NaN,0,NaN,0,family_india-1,NaN
-BOM,IXC,2023-07-27,20:05,2023-07-27,22:20,Mumbai,Chandigarh,NaN,NaN,0,NaN,0,family_india-2,NaN
-DEL,IST,2023-08-13,06:20,2023-08-13,08:10,Delhi,Istanbul,NaN,NaN,0,NaN,0,family_istanbul-1,NaN
-IST,JFK,2023-08-15,00:40,2023-08-14,21:30,Istanbul,New York,NaN,NaN,0,NaN,0,family_istanbul-2,NaN
-EWR,LIM,2024-01-12,12:00,2024-01-12,18:55,New York,Lima,Latam Airlines,NaN,1,NaN,0,machu_picchu-out,fake time input
-LIM,CUZ,2024-01-13,06:40,2024-01-13,08:00,Lima,Cusco,Latam Airlines,LA2005,0,NaN,0,machu_picchu0out,NaN
-CUZ,LIM,2024-01-19,10:40,2024-01-19,11:49,Cusco,Lima,Latam Airlines,LA2018,0,NaN,0,machu_picchu-in_1,NaN
-LIM,EWR,2024-01-20,22:00,2024-01-21,07:10,Lima,New York,Latam Airlines,NaN,0,NaN,0,machu_picchu-in_2,fake time input
-JFK,SFO,2024-07-16,06:30,2024-07-16,09:52,New York,San Francisco,American Airlines,AA76,0,NaN,0,mercury_conference-out,NaN
-SFO,JFK,2024-07-20,23:15,2024-07-21,07:52,San Francisco,New York,American Airlines,AA276,0,NaN,0,mercury_conference-in,NaN
-EWR,LHR,2024-07-24,21:50,2024-07-25,10:10,New York,London,United Airlines,UA940,0,NaN,0,shubha_wedding-out,NaN
-LHR,EWR,2024-08-04,12:00,2024-08-04,15:10,London,New York,United Airlines,UA17,0,NaN,1,shubha_wedding-in,NaN
-LHR,DEN,2024-08-05,12:00,2024-08-06,14:00,London,Denver,United Airlines,NaN,1,NaN,0,shubha_wedding-in,fake time input
-DEN,EWR,2024-08-06,16:00,2024-08-06,21:45,Denver,New York,United Airlines,NaN,0,NaN,0,shubha_wedding-in,fake time input
-JFK,AMS,2024-08-19,16:40,2024-08-20,06:00,New York,Amsterdam,KLM,KL6070,1,NaN,0,kilimanjaro_out,NaN
-AMS,JRO,2024-08-20,10:05,2024-08-20,19:55,Amsterdam,Kilimanjaro,KLM,KL571,0,NaN,0,kilimanjaro_out,NaN
-JRO,AMS,2024-08-28,21:05,2024-08-29,07:45,Kilimanjaro,Amsterdam,KLM,KL569,1,NaN,0,kilimanjaro_in,NaN
-AMS,JFK,2024-08-29,12:10,2024-08-29,14:30,Amsterdam,New York,KLM,KL6149,0,NaN,0,kilimanjaro_in,NaN
-EWR,CPH,2025-01-09,17:40,2025-01-10,07:15,New York,Copenhagen,Scandinavian Airlines,SG78H4,1,NaN,0,berlin-out,NaN
-CPH,BER,2025-01-10,08:30,2025-01-10,09:30,Copenhagen,Berlin,Scandinavian Airlines,SK1673,0,NaN,0,berlin-out,NaN
-BER,CPH,2025-01-20,10:15,2025-01-20,11:15,Berlin,Copenhagen,Scandinavian Airlines,SK1674,1,NaN,0,berlin-in,NaN
-CPH,EWR,2025-01-20,13:00,2025-01-20,15:50,Copenhagen,New York,Scandinavian Airlines,SG78H4,0,NaN,0,berlin-in,NaN
-EWR,LAX,2025-03-13,06:59,2025-03-13,10:26,New York,Los Angeles,Spirit Airlines,NK626,0,NaN,0,los_angeles-out,NaN
-LAX,EWR,2025-03-21,21:35,2025-03-22,05:50,Los Angeles,New York,Spirit Airlines,NK629,0,NaN,0,los_angeles-in,NaN
+EWR,ORD,2025-04-10,08:15,2025-04-10,09:45,New York,Chicago,United Airlines,UA345,0,NaN,0,chicago_visit-out,NaN
+ORD,EWR,2025-04-14,17:30,2025-04-14,20:00,Chicago,New York,United Airlines,UA348,0,NaN,0,chicago_visit-in,NaN
+EWR,ATL,2025-05-01,12:00,2025-05-01,14:30,New York,Atlanta,Delta,DL1234,0,NaN,0,atlanta_trip-out,NaN
+ATL,EWR,2025-05-05,09:20,2025-05-05,11:55,Atlanta,New York,Delta,DL1240,0,NaN,0,atlanta_trip-in,NaN
+JFK,LIS,2025-06-12,20:45,2025-06-13,09:05,New York,Lisbon,TAP Portugal,TP208,0,NaN,0,portugal_vacation-out,NaN
+LIS,FNC,2025-06-13,11:30,2025-06-13,13:00,Lisbon,Funchal,TAP Portugal,TP1026,1,NaN,0,portugal_vacation-out,NaN
+FNC,LIS,2025-06-20,14:00,2025-06-20,15:30,Funchal,Lisbon,TAP Portugal,TP1027,1,NaN,0,portugal_vacation-in,NaN
+LIS,JFK,2025-06-21,10:10,2025-06-21,13:40,Lisbon,New York,TAP Portugal,TP209,0,NaN,0,portugal_vacation-in,NaN
+EWR,SEA,2025-07-04,06:00,2025-07-04,09:05,New York,Seattle,Alaska Airlines,AS11,0,NaN,0,seattle_4thofjuly-out,NaN
+SEA,EWR,2025-07-09,22:45,2025-07-10,06:20,Seattle,New York,Alaska Airlines,AS12,0,NaN,0,seattle_4thofjuly-in,NaN
+EWR,HNL,2025-08-15,08:00,2025-08-15,14:45,New York,Honolulu,Hawaiian Airlines,HA51,0,NaN,0,hawaii_summer-out,NaN
+HNL,OGG,2025-08-17,13:00,2025-08-17,13:45,Honolulu,Maui,Hawaiian Airlines,HA238,0,NaN,0,hawaii_summer-out,NaN
+OGG,HNL,2025-08-24,15:30,2025-08-24,16:15,Maui,Honolulu,Hawaiian Airlines,HA239,0,NaN,0,hawaii_summer-in,NaN
+HNL,EWR,2025-08-25,21:00,2025-08-26,06:30,Honolulu,New York,Hawaiian Airlines,HA52,0,NaN,0,hawaii_summer-in,NaN
+JFK,ICN,2025-09-05,13:20,2025-09-06,16:45,New York,Seoul,Korean Air,KE82,0,NaN,0,seoul_trip-out,NaN
+ICN,NRT,2025-09-10,10:00,2025-09-10,12:30,Seoul,Tokyo,Korean Air,KE703,1,NaN,0,asia_tour,NaN
+NRT,JFK,2025-09-17,17:45,2025-09-17,17:30,Tokyo,New York,Japan Airlines,JL6,0,NaN,0,asia_tour,NaN
+EWR,YVR,2025-10-01,19:00,2025-10-01,22:05,New York,Vancouver,Air Canada,AC545,0,NaN,1,vancouver_fail,flight cancelled
+JFK,LAX,2025-11-10,07:00,2025-11-10,10:15,New York,Los Angeles,JetBlue,B618,0,NaN,0,la_winter-out,NaN
+LAX,JFK,2025-11-15,23:00,2025-11-16,07:20,Los Angeles,New York,JetBlue,B619,0,NaN,0,la_winter-in,NaN
